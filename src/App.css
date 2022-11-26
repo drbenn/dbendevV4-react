@@ -1,0 +1,27 @@
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (300ox <= width <= 600px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (00ox <= width <= 800px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media (width <=200) or (orientation: landscape) {
+  body {
+    background-color: goldenrod;
+  }
+} */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}

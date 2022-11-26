@@ -1,0 +1,16 @@
+.fixedbgcontainer {
+  position: absolute;
+  z-index: 0;
+  // ScaleX -1 flips horo
+  // transform: scaleX(-1) scaleY(-1);
+  // border: 3px solid red;
+  background-image: url("../../assets/bg/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg");
+  background-color: #0e0e0e;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  filter: brightness(10%) contrast(100%) invert(0%);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}

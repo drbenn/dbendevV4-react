@@ -1,0 +1,32 @@
+.navcontainer {
+  position: absolute;
+  z-index: 3;
+  // ScaleX -1 flips horo
+  // transform: scaleX(-1) scaleY(-1);
+  // border: 3px solid red;
+  // background-image: url("../../assets/bg/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg");
+  // background-color: #dedede;
+  color: white;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  filter: brightness(100%) contrast(100%) invert(0%);
+  bottom:10%;
+  left:5%;
+  height: fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  ol {
+    border:1px solid purple;
+    padding: 1rem 1.5rem;
+
+  }
+}
+
