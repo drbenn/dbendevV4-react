@@ -25,3 +25,11 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.sections-space {
+  width:100vw;
+  height:10vh;
+  background-color: yellow;
+  position: relative;
+  z-index: -5;
+}
