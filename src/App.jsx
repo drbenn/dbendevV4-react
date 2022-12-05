@@ -3,6 +3,13 @@ import './App.css'
 import styles from "./styles/App.module.scss"
 
 import Basic from './components/basic/basic.component';
+import About from './components/about/about.component';
+import Featured from './components/featured/featured.component';
+import Past from './components/past/past.component';
+import Posts from './components/posts/posts.component';
+import Footer from './components/footer/footer.component';
+
+
 import FixedBg from './components/fixedBg/fixedBg.component';
 import Nav from './components/nav/nav.component';
 
@@ -10,6 +17,8 @@ function App() {
   const section1 = useRef();
   const section2 = useRef();
   const section3 = useRef();
+  const section4 = useRef();
+  const section5 = useRef();
   function scrollTo(section) {
 
     section.current.scrollIntoView({behavior: "smooth"});
@@ -23,6 +32,12 @@ function App() {
 
   const isInSection3 = useIsInViewport(section3);
   console.log('isInViewport3: ', isInSection3);
+
+  const isInSection4 = useIsInViewport(section4);
+  console.log('isInViewport4: ', isInSection4);
+
+  const isInSection5 = useIsInViewport(section5);
+  console.log('isInViewport5: ', isInSection5);
 
   function useIsInViewport(ref) {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -53,7 +68,7 @@ function App() {
       <Nav></Nav>
     {/* the standalong non-module className 'container' is for gsap to id the page as all scroll components are contained within this container  */}
     <div className={`container ${styles.container}`}>
-      <div ref={section1}>
+      {/* <div ref={section1}>
         <Basic 
           image={`url(/src/assets/bg-1.jpg)`}
           headline={`Basic Scrollsnap 1!`}
@@ -61,9 +76,9 @@ function App() {
           goToSectionRef={section2}
           showArrow={true}
           />
-      </div>
+      </div> */}
     {/* section space, gives some leeway for intersection to observe only 1 section as when sections have 100vh both are identified as being in the viewport */}
-    <div className='sections-space'></div>
+    {/* <div className='sections-space'></div>
       <div ref={section2}>
         <Basic 
           image={`url(/src/assets/bg-2.jpg)`}
@@ -72,16 +87,75 @@ function App() {
           goToSectionRef={section3}
           showArrow={true}
         />
+      </div> */}
+
+
+      <div className='sections-space'></div> 
+      <div ref={section1}>
+        <About
+          image={`url(/src/assets/bg-2.jpg)`}
+          headline={`About shitbad`}
+          scrollTo={scrollTo}
+          goToSectionRef={section2}
+          showArrow={true}
+        />
       </div>
-      {/* section space, gives some leeway for intersection to observe only 1 section as when sections have 100vh both are identified as being in the viewport */}
+
+      <div className='sections-space'></div> 
+      <div ref={section2}>
+        <Featured
+          image={`url(/src/assets/bg-2.jpg)`}
+          headline={`About shitbad`}
+          scrollTo={scrollTo}
+          goToSectionRef={section3}
+          showArrow={true}
+        />
+      </div>
+
       <div className='sections-space'></div> 
       <div ref={section3}>
-        <Basic 
-          image={`url(/src/assets/bg-3.jpg)`}
-          headline={`Basic Scrollsnap 3!`}
+        <Past
+          image={`url(/src/assets/bg-2.jpg)`}
+          headline={`About shitbad`}
+          scrollTo={scrollTo}
+          goToSectionRef={section4}
+          showArrow={true}
+        />
+      </div>
+
+      <div className='sections-space'></div> 
+      <div ref={section4}>
+        <Posts
+          image={`url(/src/assets/bg-2.jpg)`}
+          headline={`About shitbad`}
+          scrollTo={scrollTo}
+          goToSectionRef={section5}
+          showArrow={true}
+        />
+      </div>
+
+      <div className='sections-space'></div> 
+      <div ref={section5}>
+        <Footer
+          image={`url(/src/assets/bg-2.jpg)`}
+          headline={`About shitbad`}
           showArrow={false}
         />
       </div>
+
+
+
+
+
+      {/* section space, gives some leeway for intersection to observe only 1 section as when sections have 100vh both are identified as being in the viewport */}
+      {/* <div className='sections-space'></div> 
+      <div ref={section4}>
+        <Basic 
+          image={`url(/src/assets/bg-3.jpg)`}
+          headline={`Basic Scrollsnap 4!`}
+          showArrow={false}
+        />
+      </div> */}
 
     </div>
     </div>

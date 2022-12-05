@@ -1,0 +1,57 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  // border: 1px solid rgb(0, 76, 255);
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  position: relative;
+  // background-image: url("/src/assets/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  img {
+    position:relative;
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .copy {
+    h2 {
+      position: relative;
+      z-index:1;
+      font-size: 1.4rem;
+      font-weight: lighter;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+  }
+  .downArrow {
+    position: absolute;
+    bottom: 50px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    background-image: url('../../assets/downarrow2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height:40px;
+    z-index: 2;
+  }
+
+  button {
+    background-color: transparent;
+    border: transparent;
+  }
+}

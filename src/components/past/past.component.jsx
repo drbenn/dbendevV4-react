@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
-import styles from './basic.module.scss'
+import styles from './past.module.scss'
 
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // https://www.youtube.com/watch?v=hnbOIVBREUM
-export default function Basic({ 
+export default function Past({ 
   image, 
   headline,
   scrollTo,
@@ -45,7 +45,7 @@ export default function Basic({
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
-        <h2 ref={headlineRef}>{headline}</h2>
+        <h2 ref={headlineRef}>PAST here</h2>
       </div>
     {/* ternary if statement, if showArrow, then show button, else, no button */}
     {showArrow && (
