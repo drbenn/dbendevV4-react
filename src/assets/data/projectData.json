@@ -14,7 +14,7 @@
     "index":12,
     "title":"More Than Last Time",
     "oneLine": "",
-    "detail":"MTLT Fitness Tracker. A play on Greg Doucette's Harder Than Last Time mantra. I was tired of tracking gym workouts in Google Sheets, with my burgeoning Angular skills, thought I would tackle a new full-stack project that included NGXS state management, NestJS and Mongoose. Now while working out I can easily see the performance of my last attempt and best attempt without scrambling through a spreadsheet. Minimum viable alpha Released August 24, 2022 and updates ongoing. ",
+    "detail":"MTLT Fitness Tracker. A play on Greg Doucette's Harder Than Last Time mantra. I was tired of tracking gym workouts in Google Sheets, with my burgeoning Angular skills, thought I would tackle a new full-stack project that included NGXS state management, NestJS and Mongoose.",
     "img": "/assets/img/project-preview/mtlt.png",
     "timeLine": "Aug 2022",
     "tech": ["/assets/img/tech/angular.png","/assets/img/tech/ngxs.png","/assets/img/tech/typescript.png", "/assets/img/tech/nestjs.png", "/assets/img/tech/mongodb.png"],
