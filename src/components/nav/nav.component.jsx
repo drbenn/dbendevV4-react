@@ -8,7 +8,6 @@ export default function Nav() {
         <ol>ABOUT</ol>
         <ol>FEATURED</ol>
         <ol>PAST PROJECT</ol>
-        <ol>POSTS</ol>
         <ol>CONTACT</ol>
       </ul>
     </div>

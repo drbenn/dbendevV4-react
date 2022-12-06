@@ -18,7 +18,7 @@ function App() {
   const section2 = useRef();
   const section3 = useRef();
   const section4 = useRef();
-  const section5 = useRef();
+  // const section5 = useRef();
   function scrollTo(section) {
 
     section.current.scrollIntoView({behavior: "smooth"});
@@ -36,8 +36,8 @@ function App() {
   const isInSection4 = useIsInViewport(section4);
   // console.log('isInViewport4: ', isInSection4);
 
-  const isInSection5 = useIsInViewport(section5);
-  // console.log('isInViewport5: ', isInSection5);
+  // const isInSection5 = useIsInViewport(section5);
+  // // console.log('isInViewport5: ', isInSection5);
 
   function useIsInViewport(ref) {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -102,7 +102,7 @@ function App() {
         />
       </div>
 
-      <div className='sections-space'></div> 
+      {/* <div className='sections-space'></div> 
       <div ref={section4}>
         <Posts
           image={`url(/src/assets/bg-2.jpg)`}
@@ -111,10 +111,10 @@ function App() {
           goToSectionRef={section5}
           showArrow={true}
         />
-      </div>
+      </div> */}
 
       <div className='sections-space'></div> 
-      <div ref={section5}>
+      <div ref={section4}>
         <Footer
           image={`url(/src/assets/bg-2.jpg)`}
           headline={`About shitbad`}

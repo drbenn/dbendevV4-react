@@ -19,6 +19,10 @@ export default function Footer({
 }) {
   const emailRef = useRef();
   const sectionRef = useRef();
+  const otherRef1 = useRef();
+  const otherRef2 = useRef();
+  const otherRef3 = useRef();
+
 
   // GSAP works with useEffect, headlineRef is the element, then animation from & to objects
   useEffect(() => {
@@ -44,13 +48,87 @@ export default function Footer({
         }
       }
     )
+
+    gsap.fromTo(
+      otherRef1.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:5,
+        delay:1,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: otherRef1.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    )
+
+    gsap.fromTo(
+      otherRef2.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:5,
+        delay:1,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: otherRef2.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    )
+
+    gsap.fromTo(
+      otherRef3.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:5,
+        delay:1,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: otherRef3.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    )
+
+
   }, []);
   return(
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <h2 ref={emailRef}>Contact</h2>
-        <div className={styles.contactblock}>
+        <div ref={otherRef1} className={styles.contactblock}>
           <div className={styles.contactimg}>
             <a href="mailto: bennett.daniel@gmail.com">
               <img 
@@ -62,7 +140,7 @@ export default function Footer({
           </div>
         </div>
 
-        <div className={styles.contactblock}>
+        <div ref={otherRef2} className={styles.contactblock}>
           <div className={styles.contactimg}>
             <a href="https://github.com/drbenn" target="_blank">
                 <img 
@@ -75,7 +153,7 @@ export default function Footer({
           </div>
         </div>
 
-        <div className={styles.contactblock}>
+        <div ref={otherRef3} className={styles.contactblock}>
           <div className={styles.contactimg}>
           <a href="https://www.linkedin.com/in/bennettdanielr/" target="_blank">
               <img 

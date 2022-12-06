@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from './featured.module.scss'
+import Projects from '../../assets/data/projectData.json';
 
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/dist/ScrollTrigger";
@@ -13,6 +14,21 @@ export default function Featured({
   goToSectionRef,
   showArrow
 }) {
+  console.log(Projects);
+  //Indexes of featured projects, UPDATE NEW TOP 3 HERE and rest will work automatically
+  let featuredIndex = [13,12,10] 
+
+  let featuredProjects = []; 
+  featuredIndex.forEach((index)=> {
+    Projects.forEach((project) => {
+      if (project.index === index) {
+        featuredProjects.push(project)
+      }
+    })
+  })
+
+  console.log(featuredProjects);
+
   const headlineRef = useRef();
   const sectionRef = useRef();
 
