@@ -99,7 +99,7 @@ export default function About({
         <div className={styles.header}><span ref={headlineRef}>Hello</span><span ref={headlineNameRef}>, I'm Dan</span></div>
         <div className={styles.paras}ref={paragraphRef}>
           <p ref={paragraphRef}>I started full-time as a software engineer at the beginning of 2022</p>
-          <p ref={paragraphRef}>See below for some personal projects I have created</p>
+          <p ref={paragraphRef}>See below for the projects I have created in my free time</p>
         </div>
 
       </div>

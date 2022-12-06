@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, require } from "react";
 import styles from './featured.module.scss'
 import Projects from '../../assets/data/projectData.json';
 
@@ -65,9 +65,11 @@ export default function Featured({
       </div>
     <div className={styles.featuredFlex}>
       {featuredProjects.map((project) => {
+        console.log(project);
         return (
           <div className={styles.projectContainer}>
             <div className={styles.imgContainer}>
+            <img src= { project.img } />
 
             </div>
             <div className={styles.projectTitle}>

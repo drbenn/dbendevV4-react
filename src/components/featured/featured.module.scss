@@ -80,10 +80,29 @@
   margin: 0 1rem 2rem 1rem;
   border-radius: 1px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgContainer {
+  width: 10rem;
+  height: 8rem;
+  border: 1px solid red;
 
+  img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    transition: all 0.15s ease-in;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+    transition: all 0.15s ease-in;
+  }
 }
 
 .projectTitle {
