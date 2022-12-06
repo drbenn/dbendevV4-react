@@ -23,6 +23,8 @@
     overflow: hidden;
   }
   .copy {
+    // border: solid red 2px;
+    height: fit-content;
     h2 {
       position: relative;
       z-index:1;
@@ -35,14 +37,32 @@
         font-size: 3rem;
       }
     }
+
   }
+
+  .header {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+
+  }
+
+  .paras {
+    margin-top: 4rem;
+  }
+
+  p {
+    color: white;
+    font-size: 1.4rem;
+  }
+
   .downArrow {
     position: absolute;
     bottom: 50px;
     left:0;
     right:0;
     margin: 0 auto;
-    background-image: url('../../assets/downarrow2.png');
+    background-image: url('../../assets/icons8-down-arrow-64(1).png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;

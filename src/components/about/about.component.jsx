@@ -14,7 +14,9 @@ export default function About({
   showArrow
 }) {
   const headlineRef = useRef();
+  const headlineNameRef = useRef();
   const sectionRef = useRef();
+  const paragraphRef = useRef();
 
   // GSAP works with useEffect, headlineRef is the element, then animation from & to objects
   useEffect(() => {
@@ -40,12 +42,66 @@ export default function About({
         }
       }
     )
+
+    gsap.fromTo(
+      headlineNameRef.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:5,
+        delay:1.5,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: headlineNameRef.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    )
+
+    gsap.fromTo(
+      paragraphRef.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:5,
+        delay:3,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: paragraphRef.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    )
   }, []);
+
   return(
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
-        <h2 ref={headlineRef}>ABOUT here</h2>
+        <div className={styles.header}><span ref={headlineRef}>Hello</span><span ref={headlineNameRef}>, I'm Dan</span></div>
+        <div className={styles.paras}ref={paragraphRef}>
+          <p ref={paragraphRef}>I started full-time as a software engineer at the beginning of 2022</p>
+          <p ref={paragraphRef}>See below for some personal projects I play around with</p>
+        </div>
+
       </div>
     {/* ternary if statement, if showArrow, then show button, else, no button */}
     {showArrow && (

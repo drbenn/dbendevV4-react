@@ -68,27 +68,6 @@ function App() {
       <Nav></Nav>
     {/* the standalong non-module className 'container' is for gsap to id the page as all scroll components are contained within this container  */}
     <div className={`container ${styles.container}`}>
-      {/* <div ref={section1}>
-        <Basic 
-          image={`url(/src/assets/bg-1.jpg)`}
-          headline={`Basic Scrollsnap 1!`}
-          scrollTo={scrollTo}
-          goToSectionRef={section2}
-          showArrow={true}
-          />
-      </div> */}
-    {/* section space, gives some leeway for intersection to observe only 1 section as when sections have 100vh both are identified as being in the viewport */}
-    {/* <div className='sections-space'></div>
-      <div ref={section2}>
-        <Basic 
-          image={`url(/src/assets/bg-2.jpg)`}
-          headline={`Basic Scrollsnap 2!`}
-          scrollTo={scrollTo}
-          goToSectionRef={section3}
-          showArrow={true}
-        />
-      </div> */}
-
 
       <div className='sections-space'></div> 
       <div ref={section1}>
@@ -142,20 +121,6 @@ function App() {
           showArrow={false}
         />
       </div>
-
-
-
-
-
-      {/* section space, gives some leeway for intersection to observe only 1 section as when sections have 100vh both are identified as being in the viewport */}
-      {/* <div className='sections-space'></div> 
-      <div ref={section4}>
-        <Basic 
-          image={`url(/src/assets/bg-3.jpg)`}
-          headline={`Basic Scrollsnap 4!`}
-          showArrow={false}
-        />
-      </div> */}
 
     </div>
     </div>
