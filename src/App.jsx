@@ -25,19 +25,19 @@ function App() {
   }
 
   const isInSection1 = useIsInViewport(section1);
-  console.log('isInViewport1: ', isInSection1);
+  // console.log('isInViewport1: ', isInSection1);
 
   const isInSection2 = useIsInViewport(section2);
-  console.log('isInViewport2: ', isInSection2);
+  // console.log('isInViewport2: ', isInSection2);
 
   const isInSection3 = useIsInViewport(section3);
-  console.log('isInViewport3: ', isInSection3);
+  // console.log('isInViewport3: ', isInSection3);
 
   const isInSection4 = useIsInViewport(section4);
-  console.log('isInViewport4: ', isInSection4);
+  // console.log('isInViewport4: ', isInSection4);
 
   const isInSection5 = useIsInViewport(section5);
-  console.log('isInViewport5: ', isInSection5);
+  // console.log('isInViewport5: ', isInSection5);
 
   function useIsInViewport(ref) {
     const [isIntersecting, setIsIntersecting] = useState(false);

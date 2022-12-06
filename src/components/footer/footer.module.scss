@@ -13,45 +13,97 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  
+  border:1px solid red;
+}
+
+h2 {
+  position: relative;
+  z-index:1;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 5rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.contactblock {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  // transform: translateX(2rem);
+}
+
+.contactimg {
+  height: 2rem;
+  width: 2rem;
+  // border: 1px solid red;
+  padding: 1rem;
+
+
   img {
-    position:relative;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .copy {
-    h2 {
-      position: relative;
-      z-index:1;
-      font-size: 1.4rem;
-      font-weight: lighter;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: rgb(255, 255, 255);
-      text-align: center;
-      @media (min-width: 768px) {
-        font-size: 3rem;
-      }
-    }
-  }
-  .downArrow {
-    position: absolute;
-    bottom: 50px;
-    left:0;
-    right:0;
-    margin: 0 auto;
-    background-image: url('../../assets/downarrow2.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 40px;
-    height:40px;
-    z-index: 2;
+    width: 100%;
+    transition: all 0.15s ease-in;
   }
 
-  button {
-    background-color: transparent;
-    border: transparent;
+  img:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+    transition: all 0.15s ease-in;
   }
+
+}
+
+// .contactlink{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  transition: all 0.2s ease-in;
+  font-size: 1.5rem;
+}
+
+a:link {
+  color: #849f92;
+  transition: all 0.2s ease-in;
+}
+
+a:visited {
+  color: #849f92;
+  transition: all 0.2s ease-in;
+}
+
+a:focus {
+  color:white;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color:white;
+  transition: all 0.2s ease-in;
+}
+
+a:active {
+  color: #849f92;
+  transition: all 0.2s ease-in;
+}
+
+.sitesignature {
+  margin-top: 12vw;
+  transform: translateX(1rem);
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
 }
