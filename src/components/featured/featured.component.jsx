@@ -68,25 +68,27 @@ export default function Featured({
         console.log(project);
         return (
           <div className={styles.projectContainer}>
-            <div className={styles.imgContainer}>
-            <img src= { project.img } />
+            <div className={styles.imgContainer} >
+              <img src= { project.img } />
 
             </div>
+
             <div className={styles.projectTitle}>
               {project.title}
-            </div>
-            <div className={styles.projectDetail}>
-              {project.detail}
             </div>
             <div className={styles.timeline}>
               {project.timeLine}
             </div>
+            <div className={styles.projectDetail}>
+              {project.detail}
+            </div>
+
 
             <div className={styles.techContainer}>
             {project.tech.map((tech) => {
               return (
                 <div className={styles.techImageContainer}>
-
+                  <img src= { tech } />
                 </div>
 
 
