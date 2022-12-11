@@ -1,6 +1,9 @@
-import { useEffect, useRef, require } from "react";
+import { useState, useEffect, useRef, require } from "react";
 import styles from './featured.module.scss'
 import Projects from '../../assets/data/projectData.json';
+
+import github from '../../assets/contact/icons8-github-96.png';
+import demo from '../../assets/contact/icons8-linking-96.png';
 
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/dist/ScrollTrigger";
@@ -14,7 +17,7 @@ export default function Featured({
   goToSectionRef,
   showArrow
 }) {
-  console.log(Projects);
+  // console.log(Projects);
   //Indexes of featured projects, UPDATE NEW TOP 3 HERE and rest will work automatically
   let featuredIndex = [13,12,10] 
 
@@ -27,10 +30,13 @@ export default function Featured({
     })
   })
 
-  console.log(featuredProjects);
+  // console.log(featuredProjects);
 
   const headlineRef = useRef();
   const sectionRef = useRef();
+  const featureRef1 = useRef();
+  const featureRef2 = useRef();
+  const featureRef3 = useRef();
 
   // GSAP works with useEffect, headlineRef is the element, then animation from & to objects
   useEffect(() => {
@@ -43,7 +49,30 @@ export default function Featured({
       {
         y: 0,
         autoAlpha:1,
-        duration:5,
+        duration:2,
+
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: headlineRef.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+
+        }
+      }
+    ),
+    gsap.fromTo(
+      featureRef1.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:3,
+        delay: 0.8,
 
         scrollTrigger: {
           // .container is ref to className in app.jsx for entire site container
@@ -56,7 +85,33 @@ export default function Featured({
         }
       }
     )
+
   }, []);
+
+
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+      console.log(windowSize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    
+    return {innerWidth, innerHeight};
+  }
+
+
   return(
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
@@ -64,16 +119,17 @@ export default function Featured({
         {/* <div className={styles.title} ref={headlineRef}>Featured Projects</div> */}
         <h2 ref={headlineRef}>Featured Projects</h2>
       </div>
-    <div className={styles.featuredFlex}>
+    <div ref={featureRef1} className={styles.featuredFlex}>
       {featuredProjects.map((project) => {
-        console.log(project);
+        // console.log(project);
         return (
-          <div className={styles.projectContainer}>
-            <div className={styles.imgContainer} >
-              <img src= { project.img } />
+          <div className={styles.projectContainer} >
+            {windowSize.innerWidth > 1100 &&
+              <div className={styles.imgContainer} >
+                <img src= { project.img } />
 
-            </div>
-
+              </div>
+            }
 
             <div className={styles.verticalProjectContainer}>
               <div className={styles.horozontalProjectContainer}>
@@ -92,11 +148,29 @@ export default function Featured({
 
 
               </div>
-                <div className={styles.timeline}>
-                  {project.timeLine}
+                <div className={styles.timelineLinkContainer}>
+                  <div className={styles.timeline}>
+                    {project.timeLine}
+                  </div>
+                  <div className={styles.linkContainer}>
+                    <div className={styles.linkImageContainer}>
+                      <a href={project.demoLink} target="_blank">
+                        <img src= { demo }  alt={"Live Demo"}/>
+                      </a>  
+                    </div>
+                    <div className={styles.linkImageContainer}>
+                      <a href={project.gitLink} target="_blank">
+                        <img src= { github }  alt={"Github"}/>
+                      </a>  
+                    </div>
+                  </div>
                 </div>
+
+
+
+
                 <div className={styles.projectDetail}>
-                  {project.detail}
+                  {project.oneLine}
                 </div>
 
 
@@ -160,3 +234,4 @@ export default function Featured({
     </div>
   )
 }
+

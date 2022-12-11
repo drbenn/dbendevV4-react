@@ -1,8 +1,17 @@
 [
   {
+    "index":14,
+    "title":"Charging Stations",
+    "oneLine": "A fun interactive design using Angular, Leaflet and scrollspy",
+    "timeLine": "Dec 2022",
+    "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/typescript.png","/project-img/icons/leaflet.png"],
+    "gitLink": "https://github.com/drbenn/charging-stations",
+    "demoLink": ""
+  },
+  {
     "index":13,
     "title":"Guess Who",
-    "oneLine": "",
+    "oneLine": "First personal React project recreating the lengendary board game",
     "detail":"Wanted to build a project in React and I remembered it came to me that I hadn't played \"Guess Who\" in years...ahhh nostalgia will make you do extraordary things... ",
     "img": "/project-img/preview/guess-who.png",
     "timeLine": "Nov 2022",
@@ -12,9 +21,9 @@
   },
   {
     "index":12,
-    "title":"More Than Last Time",
-    "oneLine": "",
-    "detail":"MTLT Fitness Tracker. A play on Greg Doucette's Harder Than Last Time mantra. I was tired of tracking gym workouts in Google Sheets, with my burgeoning Angular skills, thought I would tackle a new full-stack project that included NGXS state management, NestJS and Mongoose.",
+    "title":"MTLT",
+    "oneLine": "Full-stack Angular workout tracking application",
+    "detail":"More Than Last Time(MTLT) Fitness Tracker. A play on Greg Doucette's Harder Than Last Time mantra. I was tired of tracking gym workouts in Google Sheets, with my burgeoning Angular skills, thought I would tackle a new full-stack project that included NGXS state management, NestJS and Mongoose.",
     "img": "/project-img/preview/mtlt.png",
     "timeLine": "Aug 2022",
     "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/typescript.png", "/project-img/icons/nestjs.png", "/project-img/icons/mongodb.png"],
@@ -35,7 +44,7 @@
   {
     "index":10,
     "title":"Lite-Brite",
-    "oneLine": "",
+    "oneLine": "Vanilla Javascript interactive childhood pointillism recreation",
     "detail":"A fun, creative project. I saw the cool stickers and wanted to use them for a project but didn't know for what. Eventually remembered Lite-Brite was a thing, so the idea came to recreate a scene reminiscent of childhood. ",
     "img": "/project-img/preview/lite-brite.png",
     "timeLine": "Jun 2022",

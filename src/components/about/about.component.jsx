@@ -41,7 +41,7 @@ export default function About({
 
         }
       }
-    )
+    ),
 
     gsap.fromTo(
       headlineNameRef.current,
@@ -65,7 +65,7 @@ export default function About({
 
         }
       }
-    )
+    ),
 
     gsap.fromTo(
       paragraphRef.current,
@@ -97,7 +97,7 @@ export default function About({
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <div className={styles.header}><span ref={headlineRef}>Hello</span><span ref={headlineNameRef}>, I'm Dan</span></div>
-        <div className={styles.paras}ref={paragraphRef}>
+        <div className={styles.paras} ref={paragraphRef}>
           <p ref={paragraphRef}>I started full-time as a software engineer at the beginning of 2022</p>
           <p ref={paragraphRef}>See below for the projects I have created in my free time</p>
         </div>
