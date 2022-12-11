@@ -61,6 +61,7 @@ export default function Featured({
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
+        {/* <div className={styles.title} ref={headlineRef}>Featured Projects</div> */}
         <h2 ref={headlineRef}>Featured Projects</h2>
       </div>
     <div className={styles.featuredFlex}>
@@ -73,31 +74,68 @@ export default function Featured({
 
             </div>
 
-            <div className={styles.projectTitle}>
-              {project.title}
-            </div>
-            <div className={styles.timeline}>
-              {project.timeLine}
-            </div>
-            <div className={styles.projectDetail}>
-              {project.detail}
-            </div>
 
-
-            <div className={styles.techContainer}>
-            {project.tech.map((tech) => {
-              return (
-                <div className={styles.techImageContainer}>
-                  <img src= { tech } />
+            <div className={styles.verticalProjectContainer}>
+              <div className={styles.horozontalProjectContainer}>
+                <div className={styles.projectTitle}>
+                  {project.title}
+                </div>
+                <div className={styles.techContainer}>
+                {project.tech.map((tech) => {
+                  return (
+                    <div className={styles.techImageContainer}>
+                      <img src= { tech } />
+                    </div>
+                  )
+                })}
                 </div>
 
 
-              )
-            })}
-            
+              </div>
+                <div className={styles.timeline}>
+                  {project.timeLine}
+                </div>
+                <div className={styles.projectDetail}>
+                  {project.detail}
+                </div>
+
+
+
 
             </div>
+
           </div>
+          // <div className={styles.projectContainer}>
+          //   <div className={styles.imgContainer} >
+          //     <img src= { project.img } />
+
+          //   </div>
+
+          //   <div className={styles.projectTitle}>
+          //     {project.title}
+          //   </div>
+          //   <div className={styles.timeline}>
+          //     {project.timeLine}
+          //   </div>
+          //   <div className={styles.projectDetail}>
+          //     {project.detail}
+          //   </div>
+
+
+          //   <div className={styles.techContainer}>
+          //   {project.tech.map((tech) => {
+          //     return (
+          //       <div className={styles.techImageContainer}>
+          //         <img src= { tech } />
+          //       </div>
+
+
+          //     )
+          //   })}
+            
+
+          //   </div>
+          // </div>
 
 
         )
