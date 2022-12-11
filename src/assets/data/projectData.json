@@ -1,12 +1,15 @@
 [
   {
     "index":14,
-    "title":"Charging Stations",
-    "oneLine": "A fun interactive design using Angular, Leaflet and scrollspy",
+    "title":"EV Charging",
+    "oneLine": "A sleek interactive design using Angular, Leaflet and scrollspy",
     "timeLine": "Dec 2022",
-    "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/typescript.png","/project-img/icons/leaflet.png"],
+    "detail":"After completing a couple fun and retro projects I wanted to display a darker, cleaner project, showcasing my improvement in overall design, organization and skills with leaflet and scrollspy",
+    "img":"/project-img/preview/charging-stations.png",
+    "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
     "gitLink": "https://github.com/drbenn/charging-stations",
-    "demoLink": ""
+    "demoLink": "",
+    "date": "12/10/2022"
   },
   {
     "index":13,
@@ -17,7 +20,8 @@
     "timeLine": "Nov 2022",
     "tech": ["/project-img/icons/react.png"],
     "gitLink": "https://github.com/drbenn/guess-who-react",
-    "demoLink": "https://drbenn.github.io/guess-who-react/"
+    "demoLink": "https://drbenn.github.io/guess-who-react/",
+    "date": "11/28/2022"
   },
   {
     "index":12,
@@ -28,7 +32,8 @@
     "timeLine": "Aug 2022",
     "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/typescript.png", "/project-img/icons/nestjs.png", "/project-img/icons/mongodb.png"],
     "gitLink": "https://github.com/drbenn/mtlt",
-    "demoLink": "https://danbennett.dev/mtlt/"
+    "demoLink": "https://danbennett.dev/mtlt/",
+    "date": "8/25/2022"
   },
   {
     "index":11,
@@ -39,7 +44,8 @@
     "timeLine": "Aug 2022",
     "tech": ["/project-img/icons/js.png", "/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/dbendevV3",
-    "demoLink": ""
+    "demoLink": "",
+    "date": "8/10/2022"
   },
   {
     "index":10,
@@ -50,7 +56,8 @@
     "timeLine": "Jun 2022",
     "tech": ["/project-img/icons/js.png","/project-img/icons/html.png","/project-img/icons/css.png"],
     "gitLink": "https://github.com/drbenn/lite-brite",
-    "demoLink": "https://drbenn.github.io/lite-brite/"
+    "demoLink": "https://drbenn.github.io/lite-brite/",
+    "date": "7/15/2022"
   },
   {
     "index":9,
@@ -61,7 +68,8 @@
     "timeLine": "Jan 2022",
     "tech": ["/project-img/icons/js.png","/project-img/icons/nodejs.png","/project-img/icons/mysql.png","/project-img/icons/aws.png","/project-img/icons/bootstrap.png"],
     "gitLink": "https://github.com/drbenn/worthie-fin-track",
-    "demoLink": "https://danbennett.dev/worthie/"
+    "demoLink": "https://danbennett.dev/worthie/",
+    "date": "1/15/2022"
   },
   {
     "index":8,
@@ -72,7 +80,8 @@
     "timeLine": "Dec 2021",
     "tech": ["/project-img/icons/js.png", "/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/dividend-rate-blender",
-    "demoLink": "https://drbenn.github.io/dividend-rate-blender/"
+    "demoLink": "https://drbenn.github.io/dividend-rate-blender/",
+    "date": "12/20/2021"
   },
   {
     "index":7,
@@ -83,7 +92,8 @@
     "timeLine": "Dec 2021",
     "tech": ["/project-img/icons/js.png", "/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/dbendevV2",
-    "demoLink": "https://drbenn.github.io/dbendevV2/"
+    "demoLink": "https://drbenn.github.io/dbendevV2/",
+    "date": "12/10/2021"
   },
   {
     "index":6,
@@ -94,7 +104,8 @@
     "timeLine": "Dec 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/meme-generator",
-    "demoLink": "https://drbenn.github.io/meme-generator/"
+    "demoLink": "https://drbenn.github.io/meme-generator/",
+    "date": "12/1/2021"
   },
   {
     "index":5,
@@ -105,7 +116,8 @@
     "timeLine": "Nov 2021",
     "tech": ["/project-img/icons/js.png", "/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/retro-blackjack",
-    "demoLink": "https://drbenn.github.io/retro-blackjack/"
+    "demoLink": "https://drbenn.github.io/retro-blackjack/",
+    "date": "11/15/2021"
   },
   {
     "index":4,
@@ -116,7 +128,8 @@
     "timeLine": "Nov 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/dog-duds-store",
-    "demoLink": "https://drbenn.github.io/dog-duds-store/"
+    "demoLink": "https://drbenn.github.io/dog-duds-store/",
+    "date": "11/1/2021"
   },
   {
     "index":3,
@@ -127,7 +140,8 @@
     "timeLine": "Oct 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/simple-mobile-portfolio",
-    "demoLink": "https://drbenn.github.io/simple-mobile-portfolio/"
+    "demoLink": "https://drbenn.github.io/simple-mobile-portfolio/",
+    "date": "10/15/2021"
   },
   {
     "index":2,
@@ -138,7 +152,8 @@
     "timeLine": "Sept 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/coming-soon-landing",
-    "demoLink": "https://drbenn.github.io/coming-soon-landing/"
+    "demoLink": "https://drbenn.github.io/coming-soon-landing/",
+    "date": "9/25/2021"
   },
   {
     "index":1,
@@ -149,6 +164,7 @@
     "timeLine": "Sept 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
     "gitLink": "https://github.com/drbenn/dbendevV1",
-    "demoLink": "https://drbenn.github.io/dbendevV1/"
+    "demoLink": "https://drbenn.github.io/dbendevV1/",
+    "date": "9/15/2021"
   }
 ]

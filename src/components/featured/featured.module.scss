@@ -7,7 +7,6 @@
 .section {
   height: 100vh;
   width: 100%;
-  // border: 1px solid rgb(0, 76, 255);
   background-color: transparent;
   box-sizing: border-box;
   display: flex;
@@ -16,7 +15,6 @@
   align-items: center;
   scroll-snap-align: center;
   position: relative;
-  // background-image: url("/src/assets/bg-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -69,19 +67,13 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  // border: 1px solid red;
   width: 90%;
-  // @media (min-width: 768px) {
-  //   flex-direction: column;
-  // }
 }
 
 .projectContainer {
-  width:clamp(20rem, 60%, 60rem);
+  width:clamp(20rem, 60%, 55rem);
   min-width: 20rem;
-  // max-width: 22rem;
   height:fit-content;
-  // min-height: 8rem;
   background-color: #39423c;
   margin: 0 1rem 1rem 1rem;
   border-radius: 1px;
@@ -91,12 +83,9 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  // border: 1px solid green;
   filter: brightness(100%);
   transition: all 2s ease-in;
-  // border: 1px solid blue;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
 }
 
 .verticalProjectContainer {
@@ -108,11 +97,10 @@
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: nowrap;
-  // border: 1px solid red;
   background-color: #191c1a;
   padding: 0.5rem 0.5rem 0.7rem 1rem;
-
   border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .horozontalProjectContainer {
@@ -122,9 +110,7 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  // border: 1px solid red;
 }
-
 
 .timelineLinkContainer {
   display: flex;
@@ -132,8 +118,6 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  // border: 1px solid red;
-
 }
 
 .linkContainer {
@@ -142,9 +126,6 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  // padding: 0.3rem 0rem 0rem 0rem;
-  // border: 1px solid green;
-  // border:1px solid red;
 
   .linkImageContainer {
     width: 1rem;
@@ -152,7 +133,6 @@
     margin: 0.25rem 0 0 0.2rem;
     overflow: visible;
     transition: all 0.4s ease-in;
-    // border:1px solid palegoldenrod;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 
@@ -167,56 +147,19 @@
     cursor: pointer;
   }
 
-
-
   img:hover {
     object-fit: cover;
     object-position:center;
     width: 100%;
     height: fit-content;
     filter: brightness(105%) contrast(130%);
-    // background-color: white;
-    // border: 1px solid rgba(0, 0, 0, 0.712);
-    // border-radius: 6px;
     transform: scale(1.1) translate(0%, -50%);
     z-index:100;
     transition: all 0.2s ease-in;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  }
-
-  
+  } 
 }
 
-// .projectContainer:hover {
-//   transition: all 5s ease-in;
-//   filter: brightness(80%) contrast(120%);
-// }
-
-// .projectContainer:hover {
-//   animation: featureJiggle 0.35s ease-in;
-// }
-
-// @keyframes featureJiggle {
-//   0% {
-//     transform: rotateZ(0deg);
-//   }
-//   20% {
-//     transform: rotateZ(1deg);
-//   }
-//   40% {
-//     transform: rotateZ(-1deg);
-//   }
-//   60% {
-//     transform: rotateZ(1deg);
-//   }
-//   80% {
-//     transform: rotateZ(-1deg);
-//   }
-//   100% {
-//     transform: rotateZ(0deg);
-//   }
-  
-// }
 
 .imgContainer {
   width: clamp(16rem,calc(14rem + 2vw),30rem);
@@ -224,8 +167,6 @@
   height: clamp(0.5rem,calc(0.2rem + 8vw),10rem);
   overflow: hidden;
   transition: all 0.15s ease-in;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  // border: 1px solid goldenrod;
   border-radius: 1px;
   margin: 0rem 0rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -238,14 +179,7 @@
     width: 100%;
     height:100%;
     transition: all 0.15s ease-in;
-    // border: 1px solid hotpink;
-    // @media (min-width: 768px) {
-    //   height: 0rem;
-    //   width: 0rem;
-    // }
   }
-
-
 
   img:hover {
     filter: brightness(105%);
@@ -263,7 +197,6 @@
   color: white;
   font-weight: 600;
   text-align: center;
-  // margin-top: 0.2rem;
   text-shadow: 1px 1px 3px rgba(25, 25, 25, 0.649);
 }
 
@@ -273,7 +206,6 @@
   font-weight: 400;
   text-align: left;
   margin-top: 0.5rem;
-  // min-height: 7rem;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.649);
 }
 
@@ -281,7 +213,6 @@
   font-size: 0.9rem;
   color: white;
   font-weight: 600;
-  // text-align: left;
   margin-top: 0.2rem;
   text-shadow: 1px 1px 3px rgba(25, 25, 25, 0.649);
 }
@@ -293,7 +224,6 @@
   justify-content: space-evenly;
   align-items: flex-start;
   padding: 0.3rem 0rem 0rem 0rem;
-  // border:1px solid red;
 
   .techImageContainer {
     width: 1.6rem;
@@ -301,7 +231,6 @@
     margin: 0 0.2rem;
     overflow: visible;
     transition: all 0.4s ease-in;
-    // border:1px solid palegoldenrod;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 
@@ -314,26 +243,20 @@
     transition: all 0.2s ease-in;
   }
 
-
-
   img:hover {
     object-fit: contain;
     object-position:top;
     width: 100%;
-    filter: brightness(105%) contrast(130%);
+    filter: brightness(110%) contrast(105%);
     background-color: white;
-    // border: 1px solid rgba(0, 0, 0, 0.712);
-    border-radius: 20px;
-    transform: scale(1.6) translateY(-0.2rem);
+    padding:0.1rem;
+    border-radius: 2px;
+    transform: scale(1.8) translateY(-0.2rem);
     z-index:100;
     transition: all 0.2s ease-in;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-
-  
 }
-
-
 
 
 a {

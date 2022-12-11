@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, require } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from './featured.module.scss'
 import Projects from '../../assets/data/projectData.json';
 
@@ -11,15 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // https://www.youtube.com/watch?v=hnbOIVBREUM
 export default function Featured({ 
-  image, 
-  headline,
   scrollTo,
   goToSectionRef,
   showArrow
 }) {
-  // console.log(Projects);
-  //Indexes of featured projects, UPDATE NEW TOP 3 HERE and rest will work automatically
-  let featuredIndex = [13,12,10] 
+  let featuredIndex = [14,12,13] 
 
   let featuredProjects = []; 
   featuredIndex.forEach((index)=> {
@@ -30,13 +26,9 @@ export default function Featured({
     })
   })
 
-  // console.log(featuredProjects);
-
   const headlineRef = useRef();
   const sectionRef = useRef();
   const featureRef1 = useRef();
-  const featureRef2 = useRef();
-  const featureRef3 = useRef();
 
   // GSAP works with useEffect, headlineRef is the element, then animation from & to objects
   useEffect(() => {
@@ -50,7 +42,6 @@ export default function Featured({
         y: 0,
         autoAlpha:1,
         duration:2,
-
         scrollTrigger: {
           // .container is ref to className in app.jsx for entire site container
           scroller: ".container",
@@ -58,7 +49,6 @@ export default function Featured({
           start: "top 60%",
           end: "bottom 0%",
           toggleActions: "play none restart reverse",
-
         }
       }
     ),
@@ -73,25 +63,20 @@ export default function Featured({
         autoAlpha:1,
         duration:3,
         delay: 0.8,
-
         scrollTrigger: {
           // .container is ref to className in app.jsx for entire site container
           scroller: ".container",
-          trigger: headlineRef.current,
+          trigger: featureRef1.current,
           start: "top 60%",
           end: "bottom 0%",
           toggleActions: "play none restart reverse",
-
         }
       }
     )
-
   }, []);
 
-
-
+  // --------------- START REACT CSS MEDIA QUERY SUBSTITUTE -------------
   const [windowSize, setWindowSize] = useState(getWindowSize());
-
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -107,121 +92,65 @@ export default function Featured({
 
   function getWindowSize() {
     const {innerWidth, innerHeight} = window;
-    
     return {innerWidth, innerHeight};
   }
-
+  // --------------- END REACT CSS MEDIA QUERY SUBSTITUTE -------------
 
   return(
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
-        {/* <div className={styles.title} ref={headlineRef}>Featured Projects</div> */}
         <h2 ref={headlineRef}>Featured Projects</h2>
       </div>
-    <div ref={featureRef1} className={styles.featuredFlex}>
-      {featuredProjects.map((project) => {
-        // console.log(project);
-        return (
-          <div className={styles.projectContainer} >
-            {windowSize.innerWidth > 1100 &&
-              <div className={styles.imgContainer} >
-                <img src= { project.img } />
-
-              </div>
-            }
-
-            <div className={styles.verticalProjectContainer}>
-              <div className={styles.horozontalProjectContainer}>
-                <div className={styles.projectTitle}>
-                  {project.title}
+      <div ref={featureRef1} className={styles.featuredFlex}>
+        {featuredProjects.map((project) => {
+          return (
+            <div className={styles.projectContainer} >
+              {windowSize.innerWidth > 1100 &&
+                <div className={styles.imgContainer} >
+                  <img src= { project.img } />
                 </div>
-                <div className={styles.techContainer}>
-                {project.tech.map((tech) => {
-                  return (
-                    <div className={styles.techImageContainer}>
-                      <img src= { tech } />
-                    </div>
-                  )
-                })}
-                </div>
+              }
 
-
-              </div>
-                <div className={styles.timelineLinkContainer}>
-                  <div className={styles.timeline}>
-                    {project.timeLine}
+              <div className={styles.verticalProjectContainer}>
+                <div className={styles.horozontalProjectContainer}>
+                  <div className={styles.projectTitle}>
+                    {project.title}
                   </div>
-                  <div className={styles.linkContainer}>
-                    <div className={styles.linkImageContainer}>
-                      <a href={project.demoLink} target="_blank">
-                        <img src= { demo }  alt={"Live Demo"}/>
-                      </a>  
-                    </div>
-                    <div className={styles.linkImageContainer}>
-                      <a href={project.gitLink} target="_blank">
-                        <img src= { github }  alt={"Github"}/>
-                      </a>  
-                    </div>
+                  <div className={styles.techContainer}>
+                  {project.tech.map((tech) => {
+                    return (
+                      <div className={styles.techImageContainer}>
+                        <img src= { tech } />
+                      </div>
+                    )
+                  })}
                   </div>
                 </div>
-
-
-
-
-                <div className={styles.projectDetail}>
-                  {project.oneLine}
-                </div>
-
-
-
-
+                  <div className={styles.timelineLinkContainer}>
+                    <div className={styles.timeline}>
+                      {project.timeLine}
+                    </div>
+                    <div className={styles.linkContainer}>
+                      <div className={styles.linkImageContainer}>
+                        <a href={project.demoLink} target="_blank">
+                          <img src= { demo }  alt={"Live Demo"}/>
+                        </a>  
+                      </div>
+                      <div className={styles.linkImageContainer}>
+                        <a href={project.gitLink} target="_blank">
+                          <img src= { github }  alt={"Github"}/>
+                        </a>  
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.projectDetail}>
+                    {project.oneLine}
+                  </div>
+              </div>
             </div>
-
-          </div>
-          // <div className={styles.projectContainer}>
-          //   <div className={styles.imgContainer} >
-          //     <img src= { project.img } />
-
-          //   </div>
-
-          //   <div className={styles.projectTitle}>
-          //     {project.title}
-          //   </div>
-          //   <div className={styles.timeline}>
-          //     {project.timeLine}
-          //   </div>
-          //   <div className={styles.projectDetail}>
-          //     {project.detail}
-          //   </div>
-
-
-          //   <div className={styles.techContainer}>
-          //   {project.tech.map((tech) => {
-          //     return (
-          //       <div className={styles.techImageContainer}>
-          //         <img src= { tech } />
-          //       </div>
-
-
-          //     )
-          //   })}
-            
-
-          //   </div>
-          // </div>
-
-
-        )
-
-          
-      })}
-
-
-    </div>
-
-
-
+          )})}
+      </div>
 
     {/* ternary if statement, if showArrow, then show button, else, no button */}
     {showArrow && (
@@ -230,7 +159,6 @@ export default function Featured({
             onClick={() => scrollTo(goToSectionRef)}>
           </button>
     )}
-
     </div>
   )
 }
