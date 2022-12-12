@@ -45,12 +45,12 @@ export default function Past({
     }
   })
 
-console.log(year2021);
-console.log(year2022);
+// console.log(year2021);
+// console.log(year2022);
 
 let selectProjectForView = (project) => {
-  console.log('clicked!!!!');
-  console.log(project);
+  // console.log('clicked!!!!');
+  // console.log(project);
   setViewedProject({active:true, projectObject:[project]})
 }
   const headlineRef = useRef();
