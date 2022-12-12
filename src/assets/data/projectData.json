@@ -147,7 +147,7 @@
     "index":13,
     "title":"Guess Who",
     "oneLine": "My first React project recreating the lengendary board game",
-    "detail":"Wanted to build a project in React and I remembered it came to me that I hadn't played \"Guess Who\" in years...ahhh nostalgia will make you do extraordary things... ",
+    "detail":"I wanted to build a project in React and I remembered it came to me that I hadn't played \"Guess Who\" in years...ahhh nostalgia will make you do extraordary things... ",
     "img": "/project-img/preview/guess-who.png",
     "timeLine": "Nov 2022",
     "tech": ["/project-img/icons/react.png"],

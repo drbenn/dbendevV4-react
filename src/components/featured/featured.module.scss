@@ -94,6 +94,39 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.imgContainer {
+  width: clamp(16rem,calc(14rem + 2vw),30rem);
+  min-width: 1rem;
+  height: clamp(0.5rem,calc(0.2rem + 8vw),10rem);
+  overflow: hidden;
+  transition: all 0.15s ease-in;
+  border-radius: 1px;
+  margin: 0rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+  img {
+    object-fit: cover;
+    object-position: top;
+    transform: scale(1.15);
+    transform: translateY(0%);
+    width: 100%;
+    height:100%;
+    transition: all 0.15s ease-in;
+  }
+
+  img:hover {
+    filter: brightness(105%);
+    transform: scale(1.2) translateY(7%);
+    transition: all 0.15s ease-in;
+  }
+}
+
+.imgContainer:hover {
+  transform: translateY(-0.2rem);
+  transition: all 0.15s ease-in;
+}
+
 .verticalProjectContainer {
   width: 50%;
   min-width: 15rem;
@@ -167,37 +200,7 @@
 }
 
 
-.imgContainer {
-  width: clamp(16rem,calc(14rem + 2vw),30rem);
-  min-width: 1rem;
-  height: clamp(0.5rem,calc(0.2rem + 8vw),10rem);
-  overflow: hidden;
-  transition: all 0.15s ease-in;
-  border-radius: 1px;
-  margin: 0rem 0rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-  img {
-    object-fit: cover;
-    object-position: top;
-    transform: scale(1.15);
-    transform: translateY(0%);
-    width: 100%;
-    height:100%;
-    transition: all 0.15s ease-in;
-  }
-
-  img:hover {
-    filter: brightness(105%);
-    transform: scale(1.2) translateY(7%);
-    transition: all 0.15s ease-in;
-  }
-}
-
-.imgContainer:hover {
-  transform: translateY(-0.2rem);
-  transition: all 0.15s ease-in;
-}
 .projectTitle {
   font-size: 1.5rem;
   color: white;

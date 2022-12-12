@@ -2,14 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import styles from './past.module.scss'
 import Projects from '../../assets/data/projectData.json';
 
+import github from '../../assets/contact/icons8-github-96.png';
+import demo from '../../assets/contact/icons8-linking-96.png';
+
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // https://www.youtube.com/watch?v=hnbOIVBREUM
 export default function Past({ 
-  image, 
-  headline,
   scrollTo,
   goToSectionRef,
   showArrow
@@ -54,6 +55,10 @@ let selectProjectForView = (project) => {
 }
   const headlineRef = useRef();
   const sectionRef = useRef();
+  const projectViewportRef = useRef();
+
+  const yearRef = useRef();
+
 
   // GSAP works with useEffect, headlineRef is the element, then animation from & to objects
   useEffect(() => {
@@ -66,8 +71,7 @@ let selectProjectForView = (project) => {
       {
         y: 0,
         autoAlpha:1,
-        duration:5,
-
+        duration:2,
         scrollTrigger: {
           // .container is ref to className in app.jsx for entire site container
           scroller: ".container",
@@ -75,11 +79,72 @@ let selectProjectForView = (project) => {
           start: "top 60%",
           end: "bottom 0%",
           toggleActions: "play none restart reverse",
-
+        }
+      }
+    ),
+    gsap.fromTo(
+      projectViewportRef.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:2,
+        delay: 0.8,
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: projectViewportRef.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+        }
+      }
+    ),
+    gsap.fromTo(
+      yearRef.current,
+      {
+        autoAlpha:0,
+        y: 1,
+      },
+      {
+        y: 0,
+        autoAlpha:1,
+        duration:3,
+        delay: 2,
+        scrollTrigger: {
+          // .container is ref to className in app.jsx for entire site container
+          scroller: ".container",
+          trigger: year2022.current,
+          start: "top 60%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
         }
       }
     )
   }, []);
+
+  // --------------- START REACT CSS MEDIA QUERY SUBSTITUTE -------------
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+  // --------------- END REACT CSS MEDIA QUERY SUBSTITUTE -------------
   return(
     <div className={styles.section} ref={sectionRef}>
       {/* style={{backgroundImage: `${image}`}}> */}
@@ -97,8 +162,56 @@ let selectProjectForView = (project) => {
         <div>
           {viewedProject.projectObject.map((project) => {
             return (
-              <div className={styles.projectViewport}>
-                Full Project Detail here {project.title}
+              <div ref={projectViewportRef} key={Math.random()} className={styles.projectViewport}>
+
+                {windowSize.innerWidth >= 1100 &&
+                  <div className={styles.imgContainer} >
+                    <img src= { project.img } />
+                  </div>
+                }   
+                
+                {windowSize.innerWidth < 1100 &&
+                  <div className={styles.thinImgContainer} >
+                    <img src= { project.img } />
+                  </div>
+                }   
+
+                <div className={styles.verticalProjectContainer}>
+                  <div className={styles.horozontalProjectContainer}>
+                    <div className={styles.projectTitle}>
+                      {project.title}
+                    </div>
+                    <div className={styles.techContainer}>
+                    {project.tech.map((tech) => {
+                      return (
+                        <div key={Math.random()} className={styles.techImageContainer}>
+                          <img src= { tech } />
+                        </div>
+                      )
+                    })}
+                    </div>
+                  </div>
+                    <div className={styles.timelineLinkContainer}>
+                      <div className={styles.timeline}>
+                        {project.timeLine}
+                      </div>
+                      <div className={styles.linkContainer}>
+                        <div className={styles.linkImageContainer}>
+                          <a href={project.demoLink} target="_blank">
+                            <img src= { demo }  alt={"Live Demo"}/>
+                          </a>  
+                        </div>
+                        <div className={styles.linkImageContainer}>
+                          <a href={project.gitLink} target="_blank">
+                            <img src= { github }  alt={"Github"}/>
+                          </a>  
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.projectDetail}>
+                      {project.detail}
+                    </div>
+                </div>
               </div>
             )})
           }
@@ -106,43 +219,46 @@ let selectProjectForView = (project) => {
       }   
   
 
-      <div className={styles.yearContainer}>
-        <div className={styles.yearDisplay}>
-          <div>
-            2022
+      <div  ref={yearRef}>
+        <div className={styles.yearContainer}>
+          <div className={styles.yearDisplay}>
+            <div>
+              2022
+            </div>
+          </div>
+          <div className={styles.timelineContainer}>
+            <div className={styles.lineObject}></div>
+            <div className={styles.verticalLineObject}></div>
+            {year2022.map((project) => {
+              return (
+                <div key={Math.random()} className={styles.projectImgContainer}>
+                  <img src={project.img} onClick={() => selectProjectForView(project)} onMouseLeave={() => selectProjectForView(project)}/>
+                </div>
+              )})}
           </div>
         </div>
-        <div className={styles.timelineContainer}>
-          <div className={styles.lineObject}></div>
-          <div className={styles.verticalLineObject}></div>
-          {year2022.map((project) => {
-            return (
-              <div key={Math.random()} className={styles.projectImgContainer}>
-                <img src={project.img} onClick={() => selectProjectForView(project)}/>
-              </div>
-            )})}
+
+
+
+        <div className={styles.yearContainer}>
+          <div className={styles.yearDisplay}>
+            <div>
+              2021
+            </div>
+          </div>
+          <div className={styles.timelineContainer}>
+            <div className={styles.lineObject}></div>
+            <div className={styles.verticalLineObject}></div>
+            {year2021.map((project) => {
+              return (
+                <div key={Math.random()} className={styles.projectImgContainer}>
+                  <img src={project.img} onClick={() => selectProjectForView(project)} onMouseLeave={() => selectProjectForView(project)}/>
+                </div>
+              )})}
+          </div>
         </div>
       </div>
 
-
-
-      <div className={styles.yearContainer}>
-        <div className={styles.yearDisplay}>
-          <div>
-            2021
-          </div>
-        </div>
-        <div className={styles.timelineContainer}>
-          <div className={styles.lineObject}></div>
-          <div className={styles.verticalLineObject}></div>
-          {year2021.map((project) => {
-            return (
-              <div key={Math.random()} className={styles.projectImgContainer}>
-                <img src={project.img} onClick={() => selectProjectForView(project)}/>
-              </div>
-            )})}
-        </div>
-      </div>
     {/* ternary if statement, if showArrow, then show button, else, no button */}
     {showArrow && (
             <button 
