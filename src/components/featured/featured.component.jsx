@@ -105,7 +105,7 @@ export default function Featured({
       <div ref={featureRef1} className={styles.featuredFlex}>
         {featuredProjects.map((project) => {
           return (
-            <div className={styles.projectContainer} >
+            <div key={Math.random()} className={styles.projectContainer} >
               {windowSize.innerWidth > 1100 &&
                 <div className={styles.imgContainer} >
                   <img src= { project.img } />
@@ -120,7 +120,7 @@ export default function Featured({
                   <div className={styles.techContainer}>
                   {project.tech.map((tech) => {
                     return (
-                      <div className={styles.techImageContainer}>
+                      <div key={Math.random()} className={styles.techImageContainer}>
                         <img src= { tech } />
                       </div>
                     )
