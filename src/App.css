@@ -22,6 +22,26 @@
   }
 } */
 
+:root {
+  --burger-color:rgb(240, 240, 240);
+  /* // combo 1
+  // --primary-color:rgb(95, 113, 84);
+  // --accent: rgb(214, 199, 116);
+  //combo 2
+  // --primary-color:rgb(99, 91, 72);
+  // --accent: rgb(214, 199, 116);
+  // combo 3
+  --primary-color:rgb(129, 94, 99);
+  --accent: rgb(216, 204, 135);
+  // combo 4
+  // --primary-color:rgb(65, 85, 97);
+  // --accent: rgb(216, 181, 135);
+  // combo 5
+  // --primary-color:rgb(24, 37, 45);
+  // --accent: rgb(199, 218, 139); */
+
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
