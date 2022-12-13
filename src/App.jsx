@@ -18,9 +18,11 @@ function App() {
   const section2 = useRef();
   const section3 = useRef();
   const section4 = useRef();
+  const sectionOptions = [section1,section2,section3,section4]
+
   // const section5 = useRef();
   function scrollTo(section) {
-
+    console.log(section);
     section.current.scrollIntoView({behavior: "smooth"});
   }
 
@@ -40,8 +42,10 @@ function App() {
   // // console.log('isInViewport5: ', isInSection5);
 
   function useIsInViewport(ref) {
+
+
     const [isIntersecting, setIsIntersecting] = useState(false);
-  
+    
     const observer = useMemo(
       () =>
         new IntersectionObserver(([entry]) =>
@@ -49,10 +53,10 @@ function App() {
         ),
       [],
     );
-  
+      
     useEffect(() => {
       observer.observe(ref.current);
-  
+      console.log(observer.observe(ref.current))
       return () => {
         observer.disconnect();
       };
@@ -65,7 +69,7 @@ function App() {
   return (
     <div>
       <FixedBg></FixedBg>
-      <Nav></Nav>
+      <Nav scrollTo={scrollTo} goToSectionRef= {sectionOptions}></Nav>
     {/* the standalong non-module className 'container' is for gsap to id the page as all scroll components are contained within this container  */}
     <div className={`container ${styles.container}`}>
 

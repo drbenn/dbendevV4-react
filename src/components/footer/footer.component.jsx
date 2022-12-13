@@ -4,6 +4,7 @@ import styles from './footer.module.scss'
 import  email from '../../assets/contact/icons8-mail-100.png';
 import github from '../../assets/contact/icons8-github-96.png';
 import linkedin from '../../assets/contact/icons8-linkedin-48.png';
+import dan from '/dan.png';
 
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/dist/ScrollTrigger";
@@ -166,8 +167,12 @@ export default function Footer({
           </div>
         </div>
 
-
-      <div className={styles.sitesignature}>danbennett.dev</div>
+      <div className={styles.footerContainer}>
+        <div className={styles.danImageContainer}>
+          <img src={dan} alt="" />
+        </div>
+        <div className={styles.sitesignature}>danbennett.dev</div>
+      </div>
 
 
       </div>

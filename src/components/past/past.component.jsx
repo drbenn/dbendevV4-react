@@ -18,18 +18,20 @@ export default function Past({
   const [viewedProject, setViewedProject] = useState(
     {
       active: true,
-      projectObject:  [{
-        "index":13,
-        "title":"Guess Who",
-        "oneLine": "First personal React project recreating the lengendary board game",
-        "detail":"Wanted to build a project in React and I remembered it came to me that I hadn't played \"Guess Who\" in years...ahhh nostalgia will make you do extraordary things... ",
-        "img": "/project-img/preview/guess-who.png",
-        "timeLine": "Nov 2022",
-        "tech": ["/project-img/icons/react.png"],
-        "gitLink": "https://github.com/drbenn/guess-who-react",
-        "demoLink": "https://drbenn.github.io/guess-who-react/",
-        "date": "11/28/2022"
-      }]
+      projectObject:  [
+        {
+          "index":14,
+          "title":"EV Charging",
+          "oneLine": "A sleek, dark interactive design",
+          "timeLine": "Dec 2022",
+          "detail":"After completing a couple fun and retro projects I wanted to display a darker, cleaner project, showcasing my improvement in overall design, organization and skills with leaflet and scrollspy",
+          "img":"/project-img/preview/charging-stations.png",
+          "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
+          "gitLink": "https://github.com/drbenn/charging-stations",
+          "demoLink": "NEED TO UPDATE ALL PROJECTS DEFAULT STATE",
+          "date": "12/10/2022"
+        },
+      ]
     }
   );
 
@@ -159,10 +161,10 @@ let selectProjectForView = (project) => {
       
       }
       {viewedProject.active &&
-        <div>
+        <div ref={projectViewportRef} >
           {viewedProject.projectObject.map((project) => {
             return (
-              <div ref={projectViewportRef} key={Math.random()} className={styles.projectViewport}>
+              <div key={Math.random()} className={styles.projectViewport}>
 
                 {windowSize.innerWidth >= 1100 &&
                   <div className={styles.imgContainer} >
@@ -195,22 +197,32 @@ let selectProjectForView = (project) => {
                       <div className={styles.timeline}>
                         {project.timeLine}
                       </div>
-                      <div className={styles.linkContainer}>
+                    </div>
+                    <div className={styles.projectDetail}>
+                      {project.detail}
+                    </div>
+                    <div className={styles.linkContainer}>
+
                         <div className={styles.linkImageContainer}>
                           <a href={project.demoLink} target="_blank">
                             <img src= { demo }  alt={"Live Demo"}/>
                           </a>  
+                        </div>
+
+                        <div>
+                          <a href={project.demoLink} target="_blank">&nbsp;Live Demo</a>
                         </div>
                         <div className={styles.linkImageContainer}>
                           <a href={project.gitLink} target="_blank">
                             <img src= { github }  alt={"Github"}/>
                           </a>  
                         </div>
+
+                        <div>
+                          <a href={project.demoLink} target="_blank">&nbsp;Github Repo</a>
+                        </div>
+
                       </div>
-                    </div>
-                    <div className={styles.projectDetail}>
-                      {project.detail}
-                    </div>
                 </div>
               </div>
             )})
@@ -232,7 +244,7 @@ let selectProjectForView = (project) => {
             {year2022.map((project) => {
               return (
                 <div key={Math.random()} className={styles.projectImgContainer}>
-                  <img src={project.img} onClick={() => selectProjectForView(project)} onMouseLeave={() => selectProjectForView(project)}/>
+                  <img src={project.img} onClick={() => selectProjectForView(project)} />
                 </div>
               )})}
           </div>
@@ -252,7 +264,7 @@ let selectProjectForView = (project) => {
             {year2021.map((project) => {
               return (
                 <div key={Math.random()} className={styles.projectImgContainer}>
-                  <img src={project.img} onClick={() => selectProjectForView(project)} onMouseLeave={() => selectProjectForView(project)}/>
+                  <img src={project.img} onClick={() => selectProjectForView(project)} />
                 </div>
               )})}
           </div>

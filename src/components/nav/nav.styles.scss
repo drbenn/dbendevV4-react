@@ -12,32 +12,62 @@
   background-size: cover; /* Resize the background image to cover the entire container */
   filter: brightness(100%) contrast(100%) invert(0%);
   bottom:10%;
-  left:5%;
+  left:4%;
   height: fit-content;
   width: fit-content;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 1.5rem;
+  transition: all 0.35s ease-in;
+  
 
   ul {
     margin: 0;
     padding: 0;
+    transition: all 0.35s ease-in;
   }
   ol {
-    border:1px solid purple;
+    // border:1px solid purple;
     padding: 1rem 1.5rem;
+    transition: all 0.35s ease-in;
+  }
 
+  ol:hover {
+    background-color: #39423c;
+    // background-color: #39423c;
+    transition: all 0.35s ease-in;
+    // border-top: 1px solid #c6bdc3;
+    // border-bottom: 1px solid #c6bdc3;
+    // border-left: 1px solid #c6bdc3;
+    // border-right: 1px solid #c6bdc3;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .olFixedActive {
+    background-color: #39423c;
+    background-color: #232925;
+    transition: all 0.35s ease-in;
+    // border-top: 1px solid #c6bdc3;
+    // border-bottom: 1px solid #c6bdc3;
+    // border-left: 1px solid #c6bdc3;
+    // border-right: 1px solid #c6bdc3;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+    
   }
 }
 
 
 .burgerPosition {
-  height: 5rem;
-  width: 5rem;
-  border: 1px solid red;
+  height: 1.6rem;
+  width: 2.5rem;
+  // border: 1px solid red;
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 1rem;
+  right: 1.5rem;
 }
 
 
@@ -50,6 +80,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  // background-color: blue;
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
 
   .line1 {
     width: 70%;
@@ -63,7 +97,7 @@
   }
 
   .line2 {
-    width: 65%;
+    width: 55%;
     height: 1px;
     background-color: var(--burger-color);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -85,7 +119,7 @@
 
   .line1x {
     width: 60%;
-    height: 1px;
+    height: 2px;
     background-color: var(--burger-color);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     position: relative;
@@ -109,7 +143,7 @@
 
   .line3x {
     width: 60%;
-    height: 1px;
+    height: 2px;
     background-color: var(--burger-color);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     position: relative;
@@ -141,4 +175,62 @@
 
 .navBurger:hover .lineS3 {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+
+.navModalContainer {
+  position:absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(25, 25, 37, 0.868);
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.35s ease-in;
+}
+
+.navModalPosition {
+  // border: 1px solid red;
+  font-size: 2.2rem;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  transition: all 0.35s ease-in;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.35s ease-in;
+    cursor: pointer;
+  }
+  ol {
+    // border:1px solid purple;
+    padding: 1rem 1.5rem;
+    transition: all 0.2s ease-in;
+    background-color: #161616;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.35s ease-in;
+  }
+
+  ol:not(:last-child) {
+    border-bottom: 1px outset #4e4e4e;
+  }
+
+  ol:hover {
+    background-color: #39423c;
+    transition: all 0.35s ease-in;
+    border-top: 1px solid #c6bdc3;
+    border-bottom: 1px solid #c6bdc3;
+    border-left: 1px solid #c6bdc3;
+    border-right: 1px solid #c6bdc3;
+    box-sizing: border-box;
+    transition: all 0.35s ease-in;
+  }
 }
