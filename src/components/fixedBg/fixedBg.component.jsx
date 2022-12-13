@@ -1,6 +1,7 @@
 import styles from './fixedBg.module.scss'
 
 export default function FixedBg() {
+  const fixedBg = {backgroundColor: `rgb(23, 22, 26)`}
   const backgrounds = [
     {background : `linear-gradient(45deg, rgba(40,40,42,1) 10%, rgba(23,22,26,1) 100%)`},
     {background : `linear-gradient(125deg, rgba(46,48,54,1) 10%, rgba(15,14,17,1) 100%)`},
@@ -12,7 +13,8 @@ export default function FixedBg() {
   
   return(
     <div className={styles.fixedbgcontainer}
-    style={backgrounds[0]}
+    // style={backgrounds[0]}
+    style={fixedBg}
     
     
     >
