@@ -164,7 +164,7 @@
     "img":"/project-img/preview/charging-stations.png",
     "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
     "gitLink": "https://github.com/drbenn/charging-stations",
-    "demoLink": "NEED TO UPDATE ALL PROJECTS DEFAULT STATE",
+    "demoLink": "https://github.com/drbenn/charging-stations-gh-pages",
     "date": "12/10/2022"
   },
   {
@@ -173,10 +173,10 @@
     "oneLine": " ",
     "timeLine": "Dec 2022",
     "detail":"Redesigned personal website to practice React",
-    "img":"",
+    "img":"/project-img/preview/dbendevv4.png",
     "tech": ["/project-img/icons/react.png"],
     "gitLink": "https://github.com/drbenn/dbendevV4-react",
-    "demoLink": "",
+    "demoLink": "https://github.com/drbenn/dbendevV4-react",
     "date": "12/15/2022"
   }
 ]

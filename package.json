@@ -1,14 +1,18 @@
 {
+  "homepage": "https://drbenn.github.io/dbendevV4-react/",
   "name": "dbendevv4-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "gsap": "^3.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

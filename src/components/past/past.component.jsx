@@ -28,7 +28,7 @@ export default function Past({
           "img":"/project-img/preview/charging-stations.png",
           "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
           "gitLink": "https://github.com/drbenn/charging-stations",
-          "demoLink": "NEED TO UPDATE ALL PROJECTS DEFAULT STATE",
+          "demoLink": "https://github.com/drbenn/charging-stations-gh-pages",
           "date": "12/10/2022"
         },
       ]
