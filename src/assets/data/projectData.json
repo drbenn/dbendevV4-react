@@ -26,8 +26,8 @@
   {
     "index":3,
     "title":"Simple Mobile Portfolio",
-    "oneLine": "Basic photo and text portfolio website to reinforce CSS and explore mobile styling and design.",
-    "detail":"",
+    "oneLine": "",
+    "detail":"Basic photo and text portfolio website to reinforce CSS and explore mobile styling and design.",
     "img": "/project-img/preview/simple-mobile-portfolio.png",
     "timeLine": "Oct 2021",
     "tech": ["/project-img/icons/css.png", "/project-img/icons/html.png"],
@@ -50,8 +50,8 @@
   {
     "index":5,
     "title":"Retro Blackjack",
-    "oneLine": "My first project implementing Javascript logic and DOM manipulation.",
-    "detail":"A ",
+    "oneLine": "",
+    "detail":"My first project implementing Javascript logic and DOM manipulation.",
     "img": "/project-img/preview/retro-blackjack.png",
     "timeLine": "Nov 2021",
     "tech": ["/project-img/icons/js.png", "/project-img/icons/css.png", "/project-img/icons/html.png"],
@@ -164,19 +164,19 @@
     "img":"/project-img/preview/charging-stations.png",
     "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
     "gitLink": "https://github.com/drbenn/charging-stations",
-    "demoLink": "https://github.com/drbenn/charging-stations-gh-pages",
+    "demoLink": "https://danbennett.dev/charging-stations",
     "date": "12/10/2022"
   },
   {
     "index":15,
     "title":"danbennett.dev V4",
-    "oneLine": " ",
+    "oneLine": "",
     "timeLine": "Dec 2022",
     "detail":"Redesigned personal website to practice React",
     "img":"/project-img/preview/dbendevv4.png",
     "tech": ["/project-img/icons/react.png"],
     "gitLink": "https://github.com/drbenn/dbendevV4-react",
-    "demoLink": "https://github.com/drbenn/dbendevV4-react",
+    "demoLink": "https://danbennett.dev",
     "date": "12/15/2022"
   }
 ]
