@@ -96,7 +96,7 @@ export default function Featured({
   // --------------- END REACT CSS MEDIA QUERY SUBSTITUTE -------------
 
   return(
-    <div className={styles.section} ref={sectionRef}>
+    <div className={styles.section} ref={sectionRef}  id='featuredRefSignal'>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <h2 ref={headlineRef}>Featured Projects</h2>
@@ -133,12 +133,12 @@ export default function Featured({
                     <div className={styles.linkContainer}>
                       <div className={styles.linkImageContainer}>
                         <a href={project.demoLink} target="_blank">
-                          <img src= { demo }  alt={"Live Demo"}/>
+                          <img src= { demo }  alt={"Live Demo"} title="Live Demo" />
                         </a>  
                       </div>
                       <div className={styles.linkImageContainer}>
                         <a href={project.gitLink} target="_blank">
-                          <img src= { github }  alt={"Github"}/>
+                          <img src= { github }  alt={"Github"} title="Github Repo"/>
                         </a>  
                       </div>
                     </div>

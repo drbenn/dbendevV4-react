@@ -125,7 +125,7 @@ export default function Footer({
 
   }, []);
   return(
-    <div className={styles.section} ref={sectionRef}>
+    <div className={styles.section} ref={sectionRef}  id='footerRefSignal'>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <h2 ref={emailRef}>Contact</h2>

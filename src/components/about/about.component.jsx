@@ -93,7 +93,7 @@ export default function About({
   }, []);
 
   return(
-    <div className={styles.section} ref={sectionRef}>
+    <div className={styles.section} ref={sectionRef} id='aboutRefSignal'>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <div className={styles.header}><span ref={headlineRef}>Hello</span><span ref={headlineNameRef}>, I'm Dan</span></div>

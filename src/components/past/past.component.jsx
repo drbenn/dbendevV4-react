@@ -148,7 +148,7 @@ let selectProjectForView = (project) => {
   }
   // --------------- END REACT CSS MEDIA QUERY SUBSTITUTE -------------
   return(
-    <div className={styles.section} ref={sectionRef}>
+    <div className={styles.section} ref={sectionRef}  id='pastRefSignal'>
       {/* style={{backgroundImage: `${image}`}}> */}
       <div className={styles.copy}>
         <h2 ref={headlineRef}>All Projects</h2>
@@ -172,11 +172,11 @@ let selectProjectForView = (project) => {
                   </div>
                 }   
                 
-                {windowSize.innerWidth < 1100 &&
+                {/* {windowSize.innerWidth < 1100 &&
                   <div className={styles.thinImgContainer} >
                     <img src= { project.img } />
                   </div>
-                }   
+                }    */}
 
                 <div className={styles.verticalProjectContainer}>
                   <div className={styles.horozontalProjectContainer}>

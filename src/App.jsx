@@ -19,6 +19,7 @@ function App() {
   const section3 = useRef();
   const section4 = useRef();
   const sectionOptions = [section1,section2,section3,section4]
+  const [sectionSignal, setSectionSignal ] = useState('about');
 
   // const section5 = useRef();
   function scrollTo(section) {
@@ -48,8 +49,13 @@ function App() {
     
     const observer = useMemo(
       () =>
-        new IntersectionObserver(([entry]) =>
-          setIsIntersecting(entry.isIntersecting),
+        new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            let first100 = entry.target.innerHTML.slice(0,100);
+            emitSection(first100);
+          }
+          setIsIntersecting(entry.isIntersecting)
+        }
         ),
       [],
     );
@@ -63,13 +69,40 @@ function App() {
     }, [ref, observer]);
   
     return isIntersecting;
+
+    function emitSection(first100) {
+      let activeSection;
+      // console.log('--------------------------------------------');
+      // console.log(first100);
+      // console.log('--------------------------------------------');
+      if ( first100.search("aboutRefSignal") > 1 ) {
+        activeSection = 'setting about';
+          
+      }
+      if ( first100.search("featuredRefSignal") > 1 ) {
+        console.log('setting featured');
+        activeSection = 'featured';
+      }
+      if ( first100.search("pastRefSignal") > 1 ) {
+        console.log('setting past');
+        activeSection = 'past';
+      }
+      if ( first100.search("footerRefSignal") > 1 ) {
+        console.log('setting footer');
+        activeSection = 'footer';
+      }
+      setSectionSignal(activeSection);
+    }
   }
   
 
   return (
     <div>
       <FixedBg></FixedBg>
-      <Nav scrollTo={scrollTo} goToSectionRef= {sectionOptions}></Nav>
+      <Nav scrollTo={scrollTo} 
+        goToSectionRef= {sectionOptions} 
+        sectionSignal= { sectionSignal}>
+      </Nav>
     {/* the standalong non-module className 'container' is for gsap to id the page as all scroll components are contained within this container  */}
     <div className={`container ${styles.container}`}>
 
@@ -77,10 +110,11 @@ function App() {
       <div ref={section1}>
         <About
           image={`url(/src/assets/bg-2.jpg)`}
-          headline={`About shitbad`}
+          headline={`About bad`}
           scrollTo={scrollTo}
           goToSectionRef={section2}
           showArrow={true}
+
         />
       </div>
 
@@ -88,10 +122,11 @@ function App() {
       <div ref={section2}>
         <Featured
           image={`url(/src/assets/bg-2.jpg)`}
-          headline={`About shitbad`}
+          headline={`About bad`}
           scrollTo={scrollTo}
           goToSectionRef={section3}
           showArrow={true}
+          id='FEATURED ID'
         />
       </div>
 
@@ -99,10 +134,11 @@ function App() {
       <div ref={section3}>
         <Past
           image={`url(/src/assets/bg-2.jpg)`}
-          headline={`About shitbad`}
+          headline={`About bad`}
           scrollTo={scrollTo}
           goToSectionRef={section4}
           showArrow={true}
+          id='PAST ID'
         />
       </div>
 
@@ -110,7 +146,7 @@ function App() {
       <div ref={section4}>
         <Posts
           image={`url(/src/assets/bg-2.jpg)`}
-          headline={`About shitbad`}
+          headline={`About bad`}
           scrollTo={scrollTo}
           goToSectionRef={section5}
           showArrow={true}
@@ -121,8 +157,9 @@ function App() {
       <div ref={section4}>
         <Footer
           image={`url(/src/assets/bg-2.jpg)`}
-          headline={`About shitbad`}
+          headline={`About bad`}
           showArrow={false}
+          id='FOOTER ID'
         />
       </div>
 

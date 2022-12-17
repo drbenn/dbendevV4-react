@@ -53,13 +53,13 @@
     width: 30px;
     height: 30px;
     z-index: 2;
-    transition: all 0.2s ease-in;
+    transition: all 0.15s ease-in;
   }
 
   .downArrow:hover {
     transform: scale(1.05);
     filter: brightness(120%);
-    transition: all 0.2s ease-in;
+    transition: all 0.15s ease-in;
   }
 
   button {
@@ -138,7 +138,7 @@
   flex-wrap: nowrap;
   background-color: #191c1a;
   padding: 0.5rem 0.5rem 0.7rem 1rem;
-  border-radius: 3px;
+  border-radius: 1px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -171,8 +171,8 @@
     height: 1rem;
     margin: 0.25rem 0 0 0.2rem;
     overflow: visible;
-    transition: all 0.4s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.15s ease-in;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   img {
@@ -182,7 +182,7 @@
     width: 100%;
     height: fit-content;
     transform: translate(0%, -50%);
-    transition: all 0.2s ease-in;
+    transition: all 0.15s ease-in;
     cursor: pointer;
   }
 
@@ -194,8 +194,8 @@
     filter: brightness(105%) contrast(130%);
     transform: scale(1.1) translate(0%, -50%);
     z-index:100;
-    transition: all 0.2s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.15s ease-in;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   } 
 }
 
@@ -203,7 +203,7 @@
 
 .projectTitle {
   font-size: 1.5rem;
-  color: white;
+  color: #f1f1f1;
   font-weight: 600;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(25, 25, 25, 0.649);
@@ -211,19 +211,19 @@
 
 .projectDetail {
   font-size: 0.9rem;
-  color: white;
+  color: #f1f1f1;
   font-weight: 400;
   text-align: left;
   margin-top: 0.5rem;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.649);
+  // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.649);
 }
 
 .timeline {
   font-size: 0.9rem;
-  color: white;
-  font-weight: 600;
+  color: #f1f1f1;
+  font-weight: 400;
   margin-top: 0.2rem;
-  text-shadow: 1px 1px 3px rgba(25, 25, 25, 0.649);
+  // text-shadow: 0px 0px 1px rgba(25, 25, 25, 0.649);
 }
 
 .techContainer {
@@ -239,8 +239,8 @@
     height: 1.6rem;
     margin: 0 0.2rem;
     overflow: visible;
-    transition: all 0.3s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.15s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   img {
@@ -249,21 +249,21 @@
     object-position:top;
     width: 100%;
     height: fit-content;
-    transition: all 0.3s ease-in;
+    transition: all 0.15s ease-in;
   }
 
   img:hover {
     object-fit: contain;
     object-position:top;
     width: 100%;
-    filter: brightness(110%) contrast(105%);
-    background-color: rgba(255, 255, 255, 0.191);
-    padding:0.1rem;
-    border-radius: 2px;
-    transform: scale(1.1) translateY(-0.2rem);
+    filter: brightness(110%) contrast(120%);
+    // background-color: rgba(255, 255, 255, 0.191);
+    // padding:0.1rem;
+    // border-radius: 1px;
+    // transform: scale(1.0) translateY(-0.2rem);
     z-index:100;
-    transition: all 0.3s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.15s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 }
 
@@ -272,31 +272,31 @@ a {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
   font-size: 1.5rem;
 }
 
 a:link {
   color: #849f92;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 a:visited {
   color: #849f92;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 a:focus {
   color:white;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 a:hover {
   color:white;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 a:active {
   color: #849f92;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
 }
