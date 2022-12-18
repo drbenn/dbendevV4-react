@@ -19,7 +19,7 @@ function App() {
   const section3 = useRef();
   const section4 = useRef();
   const sectionOptions = [section1,section2,section3,section4]
-  const [sectionSignal, setSectionSignal ] = useState('about');
+  const [sectionSignal, setSectionSignal ] = useState('');
 
   // const section5 = useRef();
   function scrollTo(section) {
@@ -76,22 +76,27 @@ function App() {
       // console.log(first100);
       // console.log('--------------------------------------------');
       if ( first100.search("aboutRefSignal") > 1 ) {
-        activeSection = 'setting about';
+        activeSection = 'about';
+        setSectionSignal('about');
           
       }
       if ( first100.search("featuredRefSignal") > 1 ) {
         console.log('setting featured');
         activeSection = 'featured';
+        setSectionSignal('featured');
       }
       if ( first100.search("pastRefSignal") > 1 ) {
         console.log('setting past');
         activeSection = 'past';
+        setSectionSignal('past');
       }
       if ( first100.search("footerRefSignal") > 1 ) {
         console.log('setting footer');
         activeSection = 'footer';
+        setSectionSignal('footer');
       }
-      setSectionSignal(activeSection);
+      // setSectionSignal(activeSection);
+      console.log(sectionSignal);
     }
   }
   

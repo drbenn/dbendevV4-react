@@ -6,28 +6,34 @@ export default function Nav({scrollTo, goToSectionRef, sectionSignal}) {
   const [ navActiveSection, setNavActiveSection ] = useState(["","","",""])
   const [ navModalOpen, setNavModalOpen ] = useState(false);
 
-  useEffect(() => {
+  useEffect((sectionSignal) => {
+    
     // if (sectionSignal !== navActiveSection) {
-
-      // let navSection;
-      // console.log('HIT');
-      // if (sectionSignal === "about") {
-      //   navSection = ["olFixedActive","","",""]
-      // }
-      // if (sectionSignal === "featured") {
-      //   navSection = ["","olFixedActive","",""]
-      // }
-      // if (sectionSignal === "past") {
-      //   navSection = ["","","olFixedActive",""]
-      // }
-      // if (sectionSignal === "footer") {
-      //   navSection = ["","","","olFixedActive"]  
-      // }
-      // setNavActiveSection(navSection)  
-      // console.log(navSection);
+      console.log(sectionSignal);
+      let navSection;
+      console.log('HIT');
+      if (sectionSignal === "about") {
+        navSection = ["olFixedActive","","",""]
+        console.log('about');
+        setNavActiveSection(navSection)  
+      }
+      if (sectionSignal === "featured") {
+        navSection = ["","olFixedActive","",""]
+        console.log('featured');
+        setNavActiveSection(navSection)  
+      }
+      if (sectionSignal === "past") {
+        navSection = ["","","olFixedActive",""]
+        console.log('past');
+        setNavActiveSection(navSection)  
+      }
+      if (sectionSignal === "footer") {
+        navSection = ["","","","olFixedActive"] 
+        console.log('footer');
+        setNavActiveSection(navSection)   
+      }
     // }
-
-  }, []);
+  }, [sectionSignal]);
 
 
   const toggleNavModal = () => {
