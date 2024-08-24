@@ -25,10 +25,10 @@ export default function Past({
           "oneLine": "A sleek, dark interactive design",
           "timeLine": "Dec 2022",
           "detail":"After completing a couple fun and retro projects I wanted to display a darker, cleaner project, showcasing my improvement in overall design, organization and skills with leaflet and scrollspy",
-          "img":"/project-img/preview/charging-stations.png",
-          "tech": ["/project-img/icons/angular.png","/project-img/icons/ngxs.png","/project-img/icons/leaflet.png"],
+          "img":"/dbendev-v4/project-img/preview/charging-stations.png",
+          "tech": ["/dbendev-v4/project-img/icons/angular.png","/dbendev-v4/project-img/icons/ngxs.png","/dbendev-v4/project-img/icons/leaflet.png"],
           "gitLink": "https://github.com/drbenn/charging-stations",
-          "demoLink": "https://github.com/drbenn/charging-stations-gh-pages",
+          "demoLink": "https://danbennett.dev/charging-stations",
           "date": "12/10/2022"
         },
       ]
